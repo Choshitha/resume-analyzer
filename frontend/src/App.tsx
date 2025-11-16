@@ -20,7 +20,8 @@ function App() {
   const [result, setResult] = useState<AnalysisResult | null>(null);
   const [error, setError] = useState<string | null>(null);
 
-  const API_BASE = "https://resume-analyzer-vu6r.onrender.com";
+  const API_BASE =
+  import.meta.env.VITE_API_BASE_URL || "http://localhost:8000";
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const f = e.target.files?.[0];
